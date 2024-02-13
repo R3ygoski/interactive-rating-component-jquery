@@ -1,0 +1,122 @@
+body {
+  background: #121417;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #262E38;
+  width: 350px;
+  height: 350px;
+  border-radius: 24px;
+  display: flex;
+  flex-flow: column;
+  padding: 2rem 2rem;
+  gap: 1.5rem;
+}
+.card__img-bg {
+  background: #2d3441;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__title {
+  color: #fff;
+}
+.card__text, .card .card__thank-text {
+  color: #949DAB;
+  font-size: 15px;
+  line-height: 1.5rem;
+}
+.card .container {
+  display: flex;
+  justify-content: space-between;
+}
+.card .container .btn {
+  background: #2d3441;
+  color: #949DAB;
+  border: none;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card .container .btn:hover {
+  background: #fa7312;
+  color: #fff;
+}
+.card .container .btn-selected {
+  background: #949DAB;
+  color: #fff;
+}
+.card .submit-btn {
+  background: #fa7312;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card .submit-btn:hover {
+  color: #fa7312;
+  background: #fff;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 300px;
+    height: 350px;
+  }
+}
+.card .card__thank-img {
+  width: 50%;
+  margin: 0 auto;
+}
+.card .card__thank-feedback {
+  display: flex;
+  background: #2d3441;
+  color: #fa7312;
+  width: 60%;
+  height: 10%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+}
+.card .card__thank-title {
+  color: #fff;
+  margin: 0 auto;
+}
+.card .card__thank-text {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+
+a {
+  color: #fa7312;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,5 @@
+@mixin ff-fs($fnt-family, $fnt-sz) {
+    font-family: $fnt-family;
+    font-size: $fnt-sz;
+    font-weight: 400;
+}

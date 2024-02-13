@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main>
+    <section class="card show">
+      <button class="card__img-bg">
+        <img class="card__img" src="images/icon-star.svg" alt="Estrela">
+      </button>
+      <h2 class="card__title">How did we do?</h2>
+      <p class="card__text">Please let us know how we did with your support request. All feedback is
+        appreciated to help
+        us improve our
+        offering!</p>
+      <div class="container">
+        <button value="1" class="btn">1</button>
+        <button value="2" class="btn">2</button>
+        <button value="3" class="btn btn-selected">3</button>
+        <button value="4" class="btn">4</button>
+        <button value="5" class="btn">5</button>
+      </div>
+      <button class="submit-btn">Submit</button>
+    </section>
+
+    <section class="hidden card">
+      <img class="card__thank-img" src="images/illustration-thank-you.svg" alt="Thank You!">
+      <h4 id="card_text" class="card__thank-feedback">You selected X out of 5</h4>
+      <h2 class="card__thank-title">Thank you!</h2>
+      <p class="card__thank-text">We appreciate you taking the time to give a rating. If you ever need more support,don’t hesitate to get in touch!</p>
+    </section>
+  </main>
+
+  <!-- <script src="js/index.js"></script> -->
+  <script>
+    const btn = $('.btn')
+    const submitBtn = $('.submit-btn')
+
+    btn.each(function(){
+      $(this).on('click', ()=>{
+        const selectedBtn = $('.btn-selected')
+        selectedBtn.removeClass('btn-selected')
+        $(this).addClass('btn-selected')
+      })
+    })
+
+    submitBtn.on('click', function(){
+      $('section.hidden').toggleClass('hidden')
+      $('section.show').removeClass('show').addClass("hidden")
+
+      let btnSelected = $('.btn-selected')
+      let txt = $('#card_text')
+
+      txt.text(`You selected ${btnSelected.val()} out of 5`)
+    })
+  </script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/R3ygoski" target='_blank' rel="noreferrer">Bernardo Poggioni</a>.
+  </div>
+</body>
+
+</html>
